@@ -854,27 +854,17 @@
                         <div>Avg Time Saved</div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-                        </div> <!-- This closes stats-grid -->
-
+                
                 <!-- ====== PAYMENT PLANS ====== -->
                 <div style="margin: 40px 0; padding: 30px; background: #f8f9fa; border-radius: 15px;">
-                    <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">💰 Subscription Plans</h2>
+                    <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">💰 Upgrade to Pro</h2>
                     
                     <!-- BASIC PLAN -->
                     <div style="background: white; border-radius: 10px; padding: 25px; margin-bottom: 20px; border: 2px solid #3498db;">
                         <h3 style="color: #2c3e50;">Basic Plan - $4.99/month</h3>
                         <p style="color: #666; margin: 10px 0;">✓ 5 checks per day<br>✓ Auto-calling 6AM-6:30PM<br>✓ SMS notifications</p>
-                        <button onclick="payWithCashApp('basic')" style="padding: 12px; background: #00D632; color: white; border: none; border-radius: 8px; margin: 5px; width: 100%; cursor: pointer;">
-                            💰 Pay with Cash App
-                        </button>
-                        <button onclick="payWithVenmo('basic')" style="padding: 12px; background: #3D95CE; color: white; border: none; border-radius: 8px; margin: 5px; width: 100%; cursor: pointer;">
-                            📲 Pay with Venmo
-                        </button>
-                        <button onclick="showZelleInfo('basic')" style="padding: 12px; background: #6D1ED4; color: white; border: none; border-radius: 8px; margin: 5px; width: 100%; cursor: pointer;">
-                            🏦 Pay with Zelle
+                        <button onclick="payWithCashApp('basic')" style="padding: 15px; background: #00D632; color: white; border: none; border-radius: 8px; margin-top: 10px; width: 100%; cursor: pointer; font-size: 1.1rem;">
+                            💰 Pay $4.99 with Cash App
                         </button>
                     </div>
                     
@@ -885,14 +875,8 @@
                         </div>
                         <h3 style="color: #2c3e50;">Pro Plan - $9.99/month</h3>
                         <p style="color: #666; margin: 10px 0;">✓ Unlimited checks<br>✓ Priority auto-calling<br>✓ Push + SMS notifications<br>✓ Detailed analytics</p>
-                        <button onclick="payWithCashApp('pro')" style="padding: 12px; background: #00D632; color: white; border: none; border-radius: 8px; margin: 5px; width: 100%; cursor: pointer;">
-                            💰 Pay with Cash App
-                        </button>
-                        <button onclick="payWithVenmo('pro')" style="padding: 12px; background: #3D95CE; color: white; border: none; border-radius: 8px; margin: 5px; width: 100%; cursor: pointer;">
-                            📲 Pay with Venmo
-                        </button>
-                        <button onclick="showZelleInfo('pro')" style="padding: 12px; background: #6D1ED4; color: white; border: none; border-radius: 8px; margin: 5px; width: 100%; cursor: pointer;">
-                            🏦 Pay with Zelle
+                        <button onclick="payWithCashApp('pro')" style="padding: 15px; background: #00D632; color: white; border: none; border-radius: 8px; margin-top: 10px; width: 100%; cursor: pointer; font-size: 1.1rem;">
+                            💰 Pay $9.99 with Cash App
                         </button>
                     </div>
                     
@@ -900,19 +884,15 @@
                     <div style="background: white; border-radius: 10px; padding: 25px; border: 2px solid #9C27B0;">
                         <h3 style="color: #2c3e50;">Enterprise Plan - $29.99/month</h3>
                         <p style="color: #666; margin: 10px 0;">✓ Multiple users<br>✓ API access<br>✓ Custom integrations<br>✓ Dedicated support</p>
-                        <button onclick="payWithCashApp('enterprise')" style="padding: 12px; background: #00D632; color: white; border: none; border-radius: 8px; margin: 5px; width: 100%; cursor: pointer;">
-                            💰 Pay with Cash App
-                        </button>
-                        <button onclick="payWithVenmo('enterprise')" style="padding: 12px; background: #3D95CE; color: white; border: none; border-radius: 8px; margin: 5px; width: 100%; cursor: pointer;">
-                            📲 Pay with Venmo
-                        </button>
-                        <button onclick="showZelleInfo('enterprise')" style="padding: 12px; background: #6D1ED4; color: white; border: none; border-radius: 8px; margin: 5px; width: 100%; cursor: pointer;">
-                            🏦 Pay with Zelle
+                        <button onclick="payWithCashApp('enterprise')" style="padding: 15px; background: #00D632; color: white; border: none; border-radius: 8px; margin-top: 10px; width: 100%; cursor: pointer; font-size: 1.1rem;">
+                            💰 Pay $29.99 with Cash App
                         </button>
                     </div>
                 </div>
-
-<!-- Footer -->
+            </div>
+        </div>
+        
+        <!-- Footer -->
         <footer class="app-footer">
             <p>UA Compassion Checker Pro v2.0 | Complete Call Simulation System</p>
             <p style="font-size: 0.9rem; color: #95a5a6; margin-top: 10px;">
@@ -920,13 +900,11 @@
             </p>
         </footer>
     </div>
+
 <script>
 // ===== PAYMENT FUNCTIONS =====
-// REPLACE THESE WITH YOUR ACTUAL INFO:
-const YOUR_CASH_APP = "$YourUsername";  // Example: "$JohnDoe"
-const YOUR_VENMO = "@YourUsername";     // Example: "@John-Doe"
-const YOUR_EMAIL = "youremail@gmail.com";
-const YOUR_PHONE = "(555) 123-4567";
+const YOUR_CASH_APP = "$english113999";  // Your Cash App tag
+const YOUR_EMAIL = "itbuild68@gmail.com"; // Your email for receipts
 
 function payWithCashApp(plan) {
     const prices = {basic: 4.99, pro: 9.99, enterprise: 29.99};
@@ -937,25 +915,6 @@ function payWithCashApp(plan) {
     
     // Show instructions
     alert(`✅ Send $${amount} to ${YOUR_CASH_APP} on Cash App\n\n📧 Then email receipt to: ${YOUR_EMAIL}\n📝 Include: Your name + UA number\n⏰ Account activated within 1 hour!`);
-}
-
-function payWithVenmo(plan) {
-    const prices = {basic: 4.99, pro: 9.99, enterprise: 29.99};
-    const amount = prices[plan];
-    const note = `UA ${plan} Plan - Monthly`;
-    
-    // Open Venmo with amount
-    window.open(`https://venmo.com/${YOUR_VENMO}?amount=${amount}&note=${encodeURIComponent(note)}`, '_blank');
-    
-    // Show instructions
-    alert(`✅ Send $${amount} to ${YOUR_VENMO} on Venmo\n\n📝 Include note: "${note}"\n⏰ Account activated within 1 hour!`);
-}
-
-function showZelleInfo(plan) {
-    const prices = {basic: 4.99, pro: 9.99, enterprise: 29.99};
-    const amount = prices[plan];
-    
-    alert(`🏦 Bank Transfer Instructions:\n\n💰 Amount: $${amount}\n📧 Send to: ${YOUR_EMAIL}\n📱 Or phone: ${YOUR_PHONE}\n📝 Note: "UA ${plan} Plan"\n\n✅ After sending, email receipt to: ${YOUR_EMAIL}\n⏰ Activated within 2 hours`);
 }
 </script>
 </body>
